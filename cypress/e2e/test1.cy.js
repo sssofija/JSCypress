@@ -1,10 +1,10 @@
 
-describe('Тест Главная страница', () => {
+/*describe('Тест Главная страница', () => {
   it('Открывает главную страницу Automatio Exercise и проверяет заголовок', () => {
     cy.visit('https://automationexercise.com/')
     cy.contains('AutomationExercise') 
   })
-})
+})*/
 
 describe('Переход на страницу входа/регистрации', () => {
   it('Нажимаем на кнопку Signup/Login', () => {
@@ -12,8 +12,8 @@ describe('Переход на страницу входа/регистрации
     cy.contains('AutomationExercise')
     cy.get('.fa.fa-lock').click()
     cy.contains('New User Signup!')
-    cy.get('[data-qa="signup-name"]').type('userTest')
-    cy.get('[data-qa = "signup-email"]').type('userTest@mailsac.com')
+    cy.get('[data-qa="signup-name"]').type('userTest9')
+    cy.get('[data-qa = "signup-email"]').type('userTest9@mailsac.com')
     cy.get('[data-qa = "signup-button"]').click()
     cy.contains('Enter Account Information')
     cy.get('#id_gender2').click()
@@ -36,6 +36,12 @@ describe('Переход на страницу входа/регистрации
     cy.get('[data-qa = "zipcode"]').type("M4B 1B3")
     cy.get('[data-qa = "mobile_number"]').type("647-839-2745")
     cy.get('[data-qa = "create-account"]').click()
+    cy.contains("Account Created!")
+    cy.get('[data-qa = "continue-button"]').click()
+    cy.contains("Logged in as")
+    cy.get('.fa.fa-trash-o').click()
+    cy.contains("Account Deleted!")
+    cy.get('[data-qa = "continue-button"]').click()
   })
 }
 )
