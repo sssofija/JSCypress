@@ -5,6 +5,7 @@ export const HomePageLocators = {
   productsLink: 'a[href="/products"]',
   cartLink: 'a[href="/view_cart"]',
   signupLoginLink: 'a[href="/login"]',
+  testCasesLink: 'a[href="/test_cases"]',
   logoutLink: 'a[href="/logout"]',
   contactUsLink: 'a[href="/contact_us"]',
 

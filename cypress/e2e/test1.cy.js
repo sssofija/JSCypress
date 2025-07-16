@@ -5,13 +5,12 @@
     cy.contains('AutomationExercise') 
   })
 })*/
+import '../support/commands'
 
 describe('Переход на страницу входа/регистрации', () => {
   it('Нажимаем на кнопку Signup/Login', () => {
-    cy.visit('https://automationexercise.com/')
-    cy.contains('AutomationExercise')
-    cy.get('.fa.fa-lock').click()
-    cy.contains('New User Signup!')
+    cy.openHomePage()
+    cy.openLoginPage()
     cy.get('[data-qa="signup-name"]').type('userTest9')
     cy.get('[data-qa = "signup-email"]').type('userTest9@mailsac.com')
     cy.get('[data-qa = "signup-button"]').click()

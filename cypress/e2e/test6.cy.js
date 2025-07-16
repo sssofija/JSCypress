@@ -1,9 +1,10 @@
 import 'cypress-file-upload';
+import '../support/commands';
+
 
 describe('Contact Us Form', () => {
   it('Contact Us Form', () => {
-    cy.visit('https://automationexercise.com/')
-    cy.contains("AutomationExercise")
+    cy.openHomePage()
     cy.get('.fa.fa-envelope').click()
     cy.contains("Get In Touch")
     cy.get('[data-qa = "name"]').type("User15")

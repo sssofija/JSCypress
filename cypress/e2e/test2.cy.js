@@ -1,7 +1,8 @@
+import '../support/commands'
+
 describe('Переход на страницу входа/регистрации', () => {
   it('Нажимаем на кнопку Signup/Login', () => {
-    cy.visit('https://automationexercise.com/')
-    cy.contains('AutomationExercise')
+    cy.openHomePage()
     cy.get('.fa.fa-lock').click()
     cy.contains('New User Signup!')
     cy.get('[data-qa="signup-name"]').type('userTest12')

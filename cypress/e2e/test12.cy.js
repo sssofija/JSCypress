@@ -1,3 +1,5 @@
+import '../support/commands';
+
 describe('Тестирование модальных окон на The Internet', () => {
   beforeEach(() => {
     cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
