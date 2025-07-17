@@ -5,44 +5,53 @@
     cy.contains('AutomationExercise') 
   })
 })*/
-import '../support/commands'
+
+import { locators as loc } from '../support/locators';
+import { generateName, generateEmail, generatePassword, generateUserDetails } from '../support/generateUserData';
+import '../support/commands';
 
 describe('Переход на страницу входа/регистрации', () => {
-  it('Нажимаем на кнопку Signup/Login', () => {
-    cy.openHomePage()
-    cy.openLoginPage()
-    cy.get('[data-qa="signup-name"]').type('userTest9')
-    cy.get('[data-qa = "signup-email"]').type('userTest9@mailsac.com')
-    cy.get('[data-qa = "signup-button"]').click()
-    cy.contains('Enter Account Information')
-    cy.get('#id_gender2').click()
-    cy.get('#name').clear()
-    cy.get('#name').type('UserTest')
-    cy.get('[data-qa= "password"]').type('1234567Q')
-    cy.get('[data-qa = "days"]').select('4')
-    cy.get('[data-qa = "months"]').select('May')
-    cy.get('[data-qa = "years"]').select('1990')
-    cy.get('#newsletter').check()
-    cy.get('#optin').check()
-    cy.get('[data-qa= "first_name"]').type("User")
-    cy.get('[data-qa = "last_name"]').type("User1")
-    cy.get('[data-qa = "company"]').type("NoName")
-    cy.get('#address1').type("742 Evergreen Terrace, Springfield, 90210, United States (P.O. Box 348, Globex Corporation)")
-    cy.get('#address2').type("742 Evergreen Terrace, Springfield, 90210, United States (P.O. Box 348, Globex Corporation)")
-    cy.get('[data-qa = "country"]').select("Canada")
-    cy.get('[data-qa = "state"]').type("Ontario")
-    cy.get('[data-qa = "city"]').type("Toronto")
-    cy.get('[data-qa = "zipcode"]').type("M4B 1B3")
-    cy.get('[data-qa = "mobile_number"]').type("647-839-2745")
-    cy.get('[data-qa = "create-account"]').click()
-    cy.contains("Account Created!")
-    cy.get('[data-qa = "continue-button"]').click()
-    cy.contains("Logged in as")
-    cy.get('.fa.fa-trash-o').click()
-    cy.contains("Account Deleted!")
-    cy.get('[data-qa = "continue-button"]').click()
-  })
-}
-)
+  it('Регистрация нового пользователя с валидными данными', () => {
+    const { firstName, lastName } = generateName();
+    const fullName = `${firstName} ${lastName}`;
+    const email = generateEmail(firstName, lastName);
+    const password = generatePassword();
+    const details = generateUserDetails();
 
+    cy.openHomePage();
+    cy.openLoginPage();
 
+    cy.get(loc.LoginPageLocators.newUserSignUpNameInput).type(fullName);
+    cy.get(loc.LoginPageLocators.newUserSignUpEmailInput).type(email);
+    cy.get(loc.LoginPageLocators.newUserSignUpButton).click();
+
+    cy.contains('Enter Account Information');
+    cy.get(loc.LoginPageLocators.newUserGenderMrsRadioButton).click();
+    cy.get(loc.LoginPageLocators.newUserNameInput).clear().type(fullName);
+    cy.get(loc.LoginPageLocators.newUserPassword).type(password);
+    cy.get(loc.LoginPageLocators.newUserDayOBirthSelect).select('4');
+    cy.get(loc.LoginPageLocators.newUserMonthOBirthSelect).select('May');
+    cy.get(loc.LoginPageLocators.newUserYearOBirthSelect).select('1990');
+    cy.get(loc.LoginPageLocators.newUserNewsletterCheckbox).check();
+    cy.get(loc.LoginPageLocators.newUserSpecialOfferCheckbox).check();
+
+    cy.get(loc.LoginPageLocators.newUserFirstNameInput).type(firstName);
+    cy.get(loc.LoginPageLocators.newUserLastNameInput).type(lastName);
+    cy.get(loc.LoginPageLocators.newUserCompanyInput).type(details.company);
+    cy.get(loc.LoginPageLocators.newUserAddressInput).type(details.address);
+    cy.get(loc.LoginPageLocators.newUserAddress2Input).type(details.address);
+    cy.get(loc.LoginPageLocators.newUserCountrySelect).select('Canada');
+    cy.get(loc.LoginPageLocators.newUserStateInput).type(details.state);
+    cy.get(loc.LoginPageLocators.newUserCityInput).type(details.city);
+    cy.get(loc.LoginPageLocators.newUserZipcodeInput).type(details.zip);
+    cy.get(loc.LoginPageLocators.newUserMobileNumberInput).type(details.mobile);
+
+    cy.get(loc.LoginPageLocators.newUserCreateAccountButton).click();
+    cy.contains('Account Created!');
+    cy.get(loc.LoginPageLocators.newUserContinueButton).click();
+    cy.contains('Logged in as');
+    cy.get(loc.UserAccountPageLocators.UserAccountPageDelete).click();
+    cy.contains('Account Deleted!');
+    cy.get(loc.LoginPageLocators.newUserContinueButton).click();
+  });
+});
