@@ -1,11 +1,4 @@
 
-/*describe('Тест Главная страница', () => {
-  it('Открывает главную страницу Automatio Exercise и проверяет заголовок', () => {
-    cy.visit('https://automationexercise.com/')
-    cy.contains('AutomationExercise') 
-  })
-})*/
-
 import { locators as loc } from '../support/locators';
 import { generateName, generateEmail, generatePassword, generateUserDetails } from '../support/generateUserData';
 import '../support/commands';
