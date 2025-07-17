@@ -11,6 +11,7 @@ describe('Переход на страницу входа/регистрации
     const password = generatePassword();
     const details = generateUserDetails();
 
+
     cy.openHomePage();
     cy.openLoginPage();
 
@@ -33,7 +34,7 @@ describe('Переход на страницу входа/регистрации
     cy.get(loc.LoginPageLocators.newUserCompanyInput).type(details.company);
     cy.get(loc.LoginPageLocators.newUserAddressInput).type(details.address);
     cy.get(loc.LoginPageLocators.newUserAddress2Input).type(details.address);
-    cy.get(loc.LoginPageLocators.newUserCountrySelect).select('Canada');
+    cy.get(loc.LoginPageLocators.newUserCountrySelect).select(details.country);
     cy.get(loc.LoginPageLocators.newUserStateInput).type(details.state);
     cy.get(loc.LoginPageLocators.newUserCityInput).type(details.city);
     cy.get(loc.LoginPageLocators.newUserZipcodeInput).type(details.zip);
