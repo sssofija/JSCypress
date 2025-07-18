@@ -1,0 +1,21 @@
+{
+  "firstName": "Darron",
+  "lastName": "Nader",
+  "fullName": "Darron Nader",
+  "email": "Darron.Nader39@hotmail.com",
+  "password": "wapipotalu",
+  "details": {
+    "company": "Raynor - Howell",
+    "address": "32713 S 10th Street Suite 756",
+    "city": "Irvine",
+    "country": "Canada",
+    "state": "Alabama",
+    "zip": "16500",
+    "mobile": "(287) 772-8358 x1669",
+    "dateOfBirth": {
+      "day": "18",
+      "month": "November",
+      "year": "1985"
+    }
+  }
+}

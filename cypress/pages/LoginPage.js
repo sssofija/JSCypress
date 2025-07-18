@@ -1,4 +1,5 @@
 import { locators as loc } from '../support/locators';
+import { generateName, generateEmail, generatePassword, generateUserDetails } from '../support/generateUserData';
 
 export class LoginPage {
   openLoginPage() {
@@ -23,18 +24,30 @@ export class LoginPage {
 }
 
 export class RegistrationPage {
+
+   createUser() {
+    const { firstName, lastName } = generateName();
+    return {
+      firstName,
+      lastName,
+      fullName: `${firstName} ${lastName}`,
+      email: generateEmail(firstName, lastName),
+      password: generatePassword(),
+      details: generateUserDetails(),
+    };
+  }
   
   fillBasicInfo(fullName, password, dob) {
-    cy.contains('Enter Account Information');
-    cy.get(loc.LoginPageLocators.newUserGenderMrsRadioButton).click();
-    cy.get(loc.LoginPageLocators.newUserNameInput).clear().type(fullName);
-    cy.get(loc.LoginPageLocators.newUserPassword).type(password);
-    cy.get(loc.LoginPageLocators.newUserDayOBirthSelect).select(dob.day);
-    cy.get(loc.LoginPageLocators.newUserMonthOBirthSelect).select(dob.month);
-    cy.get(loc.LoginPageLocators.newUserYearOBirthSelect).select(dob.year);
-    cy.get(loc.LoginPageLocators.newUserNewsletterCheckbox).check();
-    cy.get(loc.LoginPageLocators.newUserSpecialOfferCheckbox).check();
-  }
+  cy.contains('Enter Account Information').should('be.visible');
+  cy.get(loc.LoginPageLocators.newUserGenderMrsRadioButton).click();
+  cy.get(loc.LoginPageLocators.newUserNameInput).clear().type(fullName);
+  cy.get(loc.LoginPageLocators.newUserPassword).type(password);
+  cy.get(loc.LoginPageLocators.newUserDayOBirthSelect).select(dob.day);
+  cy.get(loc.LoginPageLocators.newUserMonthOBirthSelect).select(dob.month);
+  cy.get(loc.LoginPageLocators.newUserYearOBirthSelect).select(dob.year);
+  cy.get(loc.LoginPageLocators.newUserNewsletterCheckbox).check();
+  cy.get(loc.LoginPageLocators.newUserSpecialOfferCheckbox).check();
+}
 
   fillAddressInfo(firstName, lastName, details) {
     cy.get(loc.LoginPageLocators.newUserFirstNameInput).type(firstName);

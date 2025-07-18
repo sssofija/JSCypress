@@ -42,5 +42,54 @@ export function generateUserDetails() {
       year,
     },
   };
+};
+
+
+// Простая функция для генерации случайной строки из букв (a-z), длиной length
+function randomAlphaString(length) {
+  let result = '';
+  const chars = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
 }
 
+// Генерация невалидного email
+export function generateInvalidEmail(firstName, lastName) {
+  const randomInvalidPart = randomAlphaString(5);
+
+  const invalidPatterns = [
+    () => `${firstName}${lastName}.com`,                // нет "@"
+    () => `${firstName}@${lastName}`,                   // нет домена
+    () => `${firstName}@${lastName}..com`,              // двойная точка
+    () => `@${lastName}.com`,                           // нет имени
+    () => `${firstName}${lastName}@`,                   // нет домена
+    () => `${firstName}#${lastName}@example.com`,       // запрещённый символ
+    () => `${firstName}${lastName}@${randomInvalidPart}`, // домен без TLD
+    () => `${firstName}@.${lastName}.com`,              // точка после "@"
+    () => `${firstName}@@${lastName}.com`,              // двойной "@"
+  ];
+
+  return invalidPatterns[Math.floor(Math.random() * invalidPatterns.length)]();
+}
+
+// Генерация невалидного пароля
+export function generateInvalidPassword() {
+  const short = randomAlphaString(3);
+  const onlySymbols = '!@#$%^&*';
+  const whitespace = ' '.repeat(10);
+  const noLetters = '12345678';
+
+  const invalidPatterns = [
+    () => short,                 // слишком короткий
+    () => '',                    // пустая строка
+    () => onlySymbols,           // только символы
+    () => whitespace,            // только пробелы
+    () => noLetters,             // только цифры
+    () => 'пароль123',           // кириллица
+    () => 'passwordpassword',    // простой пароль
+  ];
+
+  return invalidPatterns[Math.floor(Math.random() * invalidPatterns.length)]();
+}
