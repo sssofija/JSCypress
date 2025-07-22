@@ -1,7 +1,7 @@
 import '../support/commands/index';
 
-describe('Register User with existing email', () => {
-    it('should not allow registration with existing email', () => {
+describe('Logout User', () => {
+    it('Logout Valid User', () => {
 
         cy.openHomePage();
         cy.goToLoginPage();
