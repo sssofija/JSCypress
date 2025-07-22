@@ -1,20 +1,5 @@
+import { locators as loc } from '../locators';
 
-import { locators as loc } from '../support/locators';
-import {LoginPage, RegistrationPage} from '../pages/LoginPage'
-
-Cypress.Commands.add('openHomePage', () => {
-  cy.visit('/')
-  cy.contains('AutomationExercise')
-});
-Cypress.Commands.add('openTestCasesPage', () => {
-  cy.contains(loc.HomePageLocators.testCasesLink, 'Test Cases').click();
-  cy.contains("Test Cases")
-});
-
-Cypress.Commands.add('openLoginPage', () => {
-  cy.get(loc.HomePageLocators.signupLoginLink).click()
-  cy.contains('New User Signup!')
-});
 
 Cypress.Commands.add('registerUser', (user) => {
   cy.openHomePage();
@@ -49,6 +34,14 @@ Cypress.Commands.add('loginAccount', () => {
   });
 });
 
+export class UserAccountPage {
+    logOut() {
+        cy.get(loc.UserAccountPageLocators.UserAccountPageLogout).click()
+    }
 
-
-
+    deleteAccount() {
+        cy.get(loc.UserAccountPageLocators.UserAccountPageDelete).click();
+        cy.contains('Account Deleted!');
+        cy.get(loc.LoginPageLocators.newUserContinueButton).click()
+    }
+};

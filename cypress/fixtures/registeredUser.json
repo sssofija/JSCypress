@@ -1,21 +1,22 @@
 {
-  "firstName": "Darron",
-  "lastName": "Nader",
-  "fullName": "Darron Nader",
-  "email": "Darron.Nader39@hotmail.com",
-  "password": "wapipotalu",
+  "firstName": "Zackery",
+  "lastName": "Koss",
+  "fullName": "Zackery Koss",
+  "email": "Zackery.Koss@yahoo.com",
+  "password": "8VZt80Fj3P4V6Bu",
   "details": {
-    "company": "Raynor - Howell",
-    "address": "32713 S 10th Street Suite 756",
-    "city": "Irvine",
-    "country": "Canada",
+    "company": "Nikolaus, Raynor and Kuhlman",
+    "address": "3053 Reyes Greens Suite 941",
+    "city": "Kautzerboro",
+    "country": "Israel",
     "state": "Alabama",
-    "zip": "16500",
-    "mobile": "(287) 772-8358 x1669",
-    "dateOfBirth": {
-      "day": "18",
-      "month": "November",
-      "year": "1985"
-    }
-  }
+    "zip": "24676",
+    "mobile": "(951) 328-4344 x6554",
+    "day": "19",
+    "month": "April",
+    "year": "1996"
+  },
+  "day": "19",
+  "month": "April",
+  "year": "1996"
 }
