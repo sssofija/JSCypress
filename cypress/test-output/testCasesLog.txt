@@ -430,3 +430,573 @@ Test start: Invalid email #9, invalid password #7 | email: Fake@@User.com, passw
 Result: native validation message shown: "Please enter an email address."
 Test start: Invalid email #9, invalid password #8 | email: Fake@@User.com, password: abc def123
 Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: 4gvp1Lvu2L9u9rj
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: RYcWklme6VsGp_I
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: xUGv7UzQEO6u77H
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: mZ1f6wn7MQnzshk
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: 3fjHKPmg9lpCr_y
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, valid password | email: Fake#User@example.com, password: 9zWYTR3BDc09yiH
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, valid password | email: FakeUser@rndPart, password: _6z4zP0Gv0kloSx
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, valid password | email: Fake@.User.com, password: scQIfBxrii1nqAl
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, valid password | email: Fake@@User.com, password: CJSruoA31K0QcOw
+Result: native validation message shown: "Please enter an email address."
+Test start: Valid email, invalid password #1 | email: Fake_User93@gmail.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #2 | email: Fake.User@hotmail.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #3 | email: Fake_User@gmail.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #4 | email: Fake.User4@hotmail.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #5 | email: Fake_User@yahoo.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #6 | email: Fake.User82@hotmail.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #7 | email: Fake_User23@yahoo.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #8 | email: Fake.User@yahoo.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, invalid password #1 | email: FakeUser.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #2 | email: FakeUser.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #3 | email: FakeUser.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #4 | email: FakeUser.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #5 | email: FakeUser.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #6 | email: FakeUser.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #7 | email: FakeUser.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #8 | email: FakeUser.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, invalid password #1 | email: Fake@User, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #2 | email: Fake@User, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #3 | email: Fake@User, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #4 | email: Fake@User, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #5 | email: Fake@User, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #6 | email: Fake@User, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #7 | email: Fake@User, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #8 | email: Fake@User, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, invalid password #1 | email: Fake@User..com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #2 | email: Fake@User..com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #3 | email: Fake@User..com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #4 | email: Fake@User..com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #5 | email: Fake@User..com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #6 | email: Fake@User..com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #7 | email: Fake@User..com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #8 | email: Fake@User..com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #1 | email: @User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #2 | email: @User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #3 | email: @User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #4 | email: @User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #5 | email: @User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #6 | email: @User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #7 | email: @User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #8 | email: @User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #1 | email: FakeUser@, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #2 | email: FakeUser@, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #3 | email: FakeUser@, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #4 | email: FakeUser@, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #5 | email: FakeUser@, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #6 | email: FakeUser@, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #7 | email: FakeUser@, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #8 | email: FakeUser@, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, invalid password #1 | email: Fake#User@example.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #2 | email: Fake#User@example.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #3 | email: Fake#User@example.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #4 | email: Fake#User@example.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #5 | email: Fake#User@example.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #6 | email: Fake#User@example.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #7 | email: Fake#User@example.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #8 | email: Fake#User@example.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #1 | email: FakeUser@rndPart, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #2 | email: FakeUser@rndPart, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #3 | email: FakeUser@rndPart, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #4 | email: FakeUser@rndPart, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #5 | email: FakeUser@rndPart, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #6 | email: FakeUser@rndPart, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #7 | email: FakeUser@rndPart, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #8 | email: FakeUser@rndPart, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, invalid password #1 | email: Fake@.User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #2 | email: Fake@.User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #3 | email: Fake@.User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #4 | email: Fake@.User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #5 | email: Fake@.User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #6 | email: Fake@.User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #7 | email: Fake@.User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #8 | email: Fake@.User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #1 | email: Fake@@User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #2 | email: Fake@@User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #3 | email: Fake@@User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #4 | email: Fake@@User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #5 | email: Fake@@User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #6 | email: Fake@@User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #7 | email: Fake@@User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #8 | email: Fake@@User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: elRThQLcfAdqA1h
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: Sm7ZiwbK1cre2MX
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: aX26Gyrly5nMZ6c
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: z_ZM3n0JN86LjYe
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: shSH1p7izB2Uqtb
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, valid password | email: Fake#User@example.com, password: EpBertcUgrcS53q
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, valid password | email: FakeUser@rndPart, password: l6mMC0LihuykNxW
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, valid password | email: Fake@.User.com, password: S0X1LGAfKiGBHZZ
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, valid password | email: Fake@@User.com, password: 2wRM7juCos2dCFz
+Result: native validation message shown: "Please enter an email address."
+Test start: Valid email, invalid password #1 | email: Fake.User8@yahoo.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #2 | email: Fake.User0@yahoo.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #3 | email: Fake_User0@hotmail.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #4 | email: Fake.User@hotmail.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #5 | email: Fake_User74@yahoo.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #6 | email: Fake.User@hotmail.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #7 | email: Fake_User3@gmail.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #8 | email: Fake.User23@hotmail.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, invalid password #1 | email: FakeUser.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #2 | email: FakeUser.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #3 | email: FakeUser.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #4 | email: FakeUser.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #5 | email: FakeUser.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #6 | email: FakeUser.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #7 | email: FakeUser.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #8 | email: FakeUser.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, invalid password #1 | email: Fake@User, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #2 | email: Fake@User, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #3 | email: Fake@User, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #4 | email: Fake@User, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #5 | email: Fake@User, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #6 | email: Fake@User, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #7 | email: Fake@User, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #8 | email: Fake@User, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, invalid password #1 | email: Fake@User..com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #2 | email: Fake@User..com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #3 | email: Fake@User..com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #4 | email: Fake@User..com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #5 | email: Fake@User..com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #6 | email: Fake@User..com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: 5rjYWgiRgruC90l
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: xrmDU6hHw74zbUh
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: 9UqHdaWsOqOiD0W
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: pykILdvlBZQaTjl
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: 8r89ZuyfP60mOlo
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: lAdct_Wz8QSud3P
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: yWyt2ulryw0bHo7
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: BxlkIo8fW4GX2Ec
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: tmzQN3KDd2etEUk
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: aDLGG0rXGo9SgF6
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: VKx2ax7JqB7SX82
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: T5fFhgKFx1So8p_
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: ClGFvm__6ff2QQ3
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: b0uwgzFeZGn9MNL
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: uCeuy5V1o3OEs8o
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: SdsWwWcw9cPF2_b
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: YLIOSorM5Pl9z0D
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: b1boFUuyz8fqAgG
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: m6esOTSudchIuZO
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: A4vcqPJvON3mAxU
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: bk6DQKjntU3Nvud
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, valid password | email: Fake#User@example.com, password: 4hi30IxJGJRaY5e
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, valid password | email: FakeUser@rndPart, password: gnVL8596NO6LX1g
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, valid password | email: Fake@.User.com, password: YWdH6eVrCUozWOd
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, valid password | email: Fake@@User.com, password: lS5AFdCkiiiSC9x
+Result: native validation message shown: "Please enter an email address."
+Test start: Valid email, invalid password #1 | email: Fake.User28@yahoo.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #2 | email: Fake_User@gmail.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #3 | email: Fake.User44@hotmail.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #4 | email: Fake_User53@yahoo.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #5 | email: Fake_User46@yahoo.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #6 | email: Fake.User93@yahoo.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #7 | email: Fake.User@yahoo.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #8 | email: Fake.User39@yahoo.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, invalid password #1 | email: FakeUser.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #2 | email: FakeUser.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #3 | email: FakeUser.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #4 | email: FakeUser.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #5 | email: FakeUser.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #6 | email: FakeUser.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #7 | email: FakeUser.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #8 | email: FakeUser.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, invalid password #1 | email: Fake@User, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #2 | email: Fake@User, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #3 | email: Fake@User, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #4 | email: Fake@User, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #5 | email: Fake@User, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #6 | email: Fake@User, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #7 | email: Fake@User, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #8 | email: Fake@User, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, invalid password #1 | email: Fake@User..com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #2 | email: Fake@User..com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #3 | email: Fake@User..com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #4 | email: Fake@User..com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #5 | email: Fake@User..com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #6 | email: Fake@User..com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #7 | email: Fake@User..com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #8 | email: Fake@User..com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #1 | email: @User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #2 | email: @User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #3 | email: @User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #4 | email: @User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #5 | email: @User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #6 | email: @User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #7 | email: @User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #8 | email: @User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #1 | email: FakeUser@, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #2 | email: FakeUser@, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #3 | email: FakeUser@, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #4 | email: FakeUser@, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #5 | email: FakeUser@, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #6 | email: FakeUser@, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #7 | email: FakeUser@, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, invalid password #8 | email: FakeUser@, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, invalid password #1 | email: Fake#User@example.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #2 | email: Fake#User@example.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #3 | email: Fake#User@example.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #4 | email: Fake#User@example.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #5 | email: Fake#User@example.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #6 | email: Fake#User@example.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #7 | email: Fake#User@example.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #6, invalid password #8 | email: Fake#User@example.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #1 | email: FakeUser@rndPart, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #2 | email: FakeUser@rndPart, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #3 | email: FakeUser@rndPart, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #4 | email: FakeUser@rndPart, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #5 | email: FakeUser@rndPart, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #6 | email: FakeUser@rndPart, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #7 | email: FakeUser@rndPart, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, invalid password #8 | email: FakeUser@rndPart, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, invalid password #1 | email: Fake@.User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #2 | email: Fake@.User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #3 | email: Fake@.User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #4 | email: Fake@.User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #5 | email: Fake@.User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #6 | email: Fake@.User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #7 | email: Fake@.User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #8, invalid password #8 | email: Fake@.User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #1 | email: Fake@@User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #2 | email: Fake@@User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #3 | email: Fake@@User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #4 | email: Fake@@User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #5 | email: Fake@@User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #6 | email: Fake@@User.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #7 | email: Fake@@User.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, invalid password #8 | email: Fake@@User.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: uQlzH7MTMG0aUum
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: hQ2mNAeclfWc1cc
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: 8bMQBsVwYKIKEla
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: FPPjNg7_kRsQrSZ
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: AG3s2lEl_ZqQ8SE
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: mo_XNf1tCpZ16Ja
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, valid password | email: Fake#User@example.com, password: T_ndfMi4fXoL1k6
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #7, valid password | email: FakeUser@rndPart, password: 1jPN8DJ03Xy4_sW
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #8, valid password | email: Fake@.User.com, password: 0gRljkikPdmgQMo
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #9, valid password | email: Fake@@User.com, password: Qo5fvONxGAaE2Lx
+Result: native validation message shown: "Please enter an email address."
+Test start: Valid email, invalid password #1 | email: Fake_User90@yahoo.com, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #2 | email: Fake.User@yahoo.com, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #3 | email: Fake.User@hotmail.com, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #4 | email: Fake.User30@hotmail.com, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #5 | email: Fake.User25@yahoo.com, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #6 | email: Fake_User24@gmail.com, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #7 | email: Fake_User84@gmail.com, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Valid email, invalid password #8 | email: Fake.User@gmail.com, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #1, invalid password #1 | email: FakeUser.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #2 | email: FakeUser.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #3 | email: FakeUser.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #4 | email: FakeUser.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #5 | email: FakeUser.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #6 | email: FakeUser.com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #7 | email: FakeUser.com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, invalid password #8 | email: FakeUser.com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, invalid password #1 | email: Fake@User, password: 123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #2 | email: Fake@User, password: password
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #3 | email: Fake@User, password:       
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #4 | email: Fake@User, password: abcdefg
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #5 | email: Fake@User, password: 1234567
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #6 | email: Fake@User, password: abc123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #7 | email: Fake@User, password: !!!!!!!
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #2, invalid password #8 | email: Fake@User, password: abc def123
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, invalid password #1 | email: Fake@User..com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #2 | email: Fake@User..com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #3 | email: Fake@User..com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #4 | email: Fake@User..com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #5 | email: Fake@User..com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #6 | email: Fake@User..com, password: abc123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #7 | email: Fake@User..com, password: !!!!!!!
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #3, invalid password #8 | email: Fake@User..com, password: abc def123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #1 | email: @User.com, password: 123
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #2 | email: @User.com, password: password
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #3 | email: @User.com, password:       
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #4 | email: @User.com, password: abcdefg
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, invalid password #5 | email: @User.com, password: 1234567
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: jqtlWEUKbvX3Bfv
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: JEnBNztXqlsFnzd
+Test start: Invalid email #1, valid password | email: FakeUser.com, password: 5xnd3YLt8xvMZJX
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #2, valid password | email: Fake@User, password: MD5iX8kg0Zjv52o
+Result: error message "Your email or password is incorrect!" shown
+Test start: Invalid email #3, valid password | email: Fake@User..com, password: 6FbXXNzcBeqeOGU
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #4, valid password | email: @User.com, password: 0ClqdfqGLnWLAaZ
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #5, valid password | email: FakeUser@, password: 8ecX6ULiNpdb7a5
+Result: native validation message shown: "Please enter an email address."
+Test start: Invalid email #6, valid password | email: Fake#User@example.com, password: q0FRJcNRPfDeTt9

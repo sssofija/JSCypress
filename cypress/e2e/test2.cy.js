@@ -1,14 +1,15 @@
 
 import '../support/commands/index';
-import { createUser } from '../support/utilities/auth';
 
-describe('Переход на страницу входа/регистрации', () => {
-  it('Регистрация нового пользователя с валидными данными', () => {
-          
-       cy.registerNewUser();
-       cy.logOut();
-       cy.checkNewUserAccountLoginPage();
-       cy.deleteAccount();
+describe('Login User with correct email and password', () => {
+  it('Login User with correct email and password', () => {
+      
+      cy.validUser();
+      cy.get('@newUser').then((user) => {
+            cy.goToLoginPage();
+            cy.logIn(user.email, user.password);
+            cy.contains('Logged in as').should('be.visible');
+        });
+      cy.deleteAccount();
   });
 });
-

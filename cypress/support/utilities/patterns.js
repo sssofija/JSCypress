@@ -1,4 +1,3 @@
-// support/patterns.js
 
 export const invalidEmailPatterns = [
   (firstName, lastName, randomInvalidPart) => `${firstName}${lastName}.com`,

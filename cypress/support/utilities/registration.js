@@ -1,10 +1,31 @@
 import { faker } from '@faker-js/faker';
+import { generateEmail, generatePassword } from './auth';
 
 const countries = ['India', 'United States', 'Canada', 'Australia', 'Israel', 'New Zealand', 'Singapore'];
 const months = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
+
+export function createUser() {
+  const { firstName, lastName } = generateName();
+  const fullName = `${firstName} ${lastName}`;
+  const email = generateEmail(firstName, lastName, { valid: true });
+  const password = generatePassword({ valid: true });
+  const details = generateUserDetails();
+
+  return {
+    firstName,
+    lastName,
+    fullName,
+    email,
+    password,
+    details,
+    day: details.day,
+    month: details.month,
+    year: details.year,
+  };
+};
 
 export function generateName() {
   return {

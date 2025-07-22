@@ -5,6 +5,7 @@ Cypress.Commands.add('openHomePage', () => {
   cy.visit('/')
   cy.contains('AutomationExercise')
 });
+
 Cypress.Commands.add('goToTestCasesPage', () => {
   cy.contains(loc.HomePageLocators.testCasesLink, 'Test Cases').click();
   cy.contains("Test Cases")

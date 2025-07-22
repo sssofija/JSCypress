@@ -1,7 +1,6 @@
 import '../support/commands/index';
-import { createUser } from '../support/utilities/auth';
 
-describe('Navigation to login/registration page', () => {
+describe('Register User', () => {
   it('Registers a new user with valid data', () => {
 
     cy.openHomePage();
