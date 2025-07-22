@@ -9,8 +9,7 @@ describe('Contact Us Form', () => {
     const email = faker.internet.email({ firstName: name });
 
     cy.openHomePage();
-    cy.get(loc.HomePageLocators.contactUsLink).click();
-    cy.contains('Get In Touch');
+    cy.goToContactUsPage();
 
     cy.get(loc.ContactUsPageLocators.nameInput).type(name);
     cy.get(loc.ContactUsPageLocators.emailInput).type(email);

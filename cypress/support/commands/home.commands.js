@@ -20,3 +20,8 @@ Cypress.Commands.add('goToSignupPage', () => {
     cy.get(loc.HomePageLocators.signupLoginLink).click();
     cy.contains('New User Signup!');
 });
+
+Cypress.Commands.add('goToContactUsPage', () =>{
+  cy.get(loc.HomePageLocators.contactUsLink).click();
+    cy.contains('Get In Touch');
+});
