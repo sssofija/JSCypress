@@ -2,11 +2,28 @@ import { locators as loc } from '../locators';
 
 //Registration
 
-Cypress.Commands.add ('registrationNewUserLoginPage', (name, email) => {
+import { createUser } from '../utilities/auth';
+
+Cypress.Commands.add('registerNewUser', () => {
+    const user = createUser();
+    cy.openHomePage();
+    cy.goToSignupPage();
+    cy.registrationNewUserLoginPage(user.fullName, user.email);
+    cy.fillBasicInfo(user.fullName, user.password, user.day, user.month, user.year);
+    cy.fillAddressInfo(user.firstName, user.lastName, user.details);
+    cy.submitRegistration(user);
+    cy.wrap(user).as('newUser');
+});
+
+
+Cypress.Commands.add('registrationNewUserLoginPage', (name, email, expectSuccess = true) => {
     cy.get('input[data-qa="signup-name"]').type(name);
     cy.get('input[data-qa="signup-email"]').type(email);
     cy.get('button[data-qa="signup-button"]').click();
-    cy.contains('Enter Account Information');
+
+    if (expectSuccess) {
+        cy.contains('Enter Account Information', { timeout: 10000 }).should('be.visible');
+    }
 });
 
 Cypress.Commands.add('fillBasicInfo', (name, password, day, month, year) => {
@@ -48,18 +65,22 @@ Cypress.Commands.add ('submitRegistration',(user) => {
 });
 
 Cypress.Commands.add ('deleteAccount', () => {
-    cy.get(loc.UserAccountPageLocators.UserAccountPageDelete).click();
+    cy.get(loc.UserAccountPageLocators.userAccountPageDelete).click();
     cy.contains('Account Deleted!');
     cy.get(loc.LoginPageLocators.newUserContinueButton).click();
 });
 
 //Login in account
 
-Cypress.Commands.add('CheckNewUserAccount_loginPage', () => {
+Cypress.Commands.add('checkNewUserAccountLoginPage', () => {
   cy.fixture('registeredUser').then(({ email, password, fullName }) => {
     cy.get(loc.LoginPageLocators.emailInput).type(email);
     cy.get(loc.LoginPageLocators.passwordInput).type(password);
     cy.get(loc.LoginPageLocators.loginButton).click();
     cy.contains(`Logged in as ${fullName}`).should('be.visible');
   });
+});
+
+Cypress.Commands.add('logOut', () =>{
+  cy.get(loc.UserAccountPageLocators.userAccountPageLogout).click();
 });

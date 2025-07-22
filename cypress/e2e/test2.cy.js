@@ -1,21 +1,14 @@
 
-import '../support/commands';
-import { RegistrationPage } from '../pages/LoginPage';
-import { UserAccountPage } from '../pages/UserAccountPage';
-
+import '../support/commands/index';
+import { createUser } from '../support/utilities/auth';
 
 describe('Переход на страницу входа/регистрации', () => {
   it('Регистрация нового пользователя с валидными данными', () => {
-    const registrationPage = new RegistrationPage();
-    const user = registrationPage.createUser();
-    const userAccountPage = new UserAccountPage()
-
-    cy.registerUser(user);
-    userAccountPage.logOut();
-    cy.openLoginPageAccount();
-    cy.loginAccount();
-    userAccountPage.deleteAccount()
-
+          
+       cy.registerNewUser();
+       cy.logOut();
+       cy.checkNewUserAccountLoginPage();
+       cy.deleteAccount();
   });
 });
 

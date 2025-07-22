@@ -102,9 +102,9 @@ export const CartPageLocators = {
 };
 
 export const UserAccountPageLocators = {
-    UserAccountPageLogout: '.fa.fa-lock',
-    UserAccountPageLogged: '.fa.fa-user',
-    UserAccountPageDelete: '.fa.fa-trash-o'
+    userAccountPageLogout: '.fa.fa-lock',
+    userAccountPageLogged: '.fa.fa-user',
+    userAccountPageDelete: '.fa.fa-trash-o'
 };
 
 export const locators = {
