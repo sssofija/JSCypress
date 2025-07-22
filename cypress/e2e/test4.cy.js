@@ -5,10 +5,6 @@ describe('Register User with existing email', () => {
 
         cy.registerNewUser(); 
         cy.logOut();
-        cy.get('@newUser').then((user) => {
-            cy.goToSignupPage();
-            cy.registrationNewUserLoginPage(user.fullName, user.email, false);
-            cy.contains('Email Address already exist!').should('be.visible');
-        });
+        cy.contains('Login to your account').should('be.visible');
     });
 });

@@ -5,7 +5,6 @@ describe('Register User with existing email', () => {
         
         cy.registerNewUser();
         cy.logOut();
-
         cy.get('@newUser').then((user) => {
             cy.goToSignupPage();
             cy.registrationNewUserLoginPage(user.fullName, user.email);
