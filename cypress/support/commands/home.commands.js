@@ -35,3 +35,8 @@ Cypress.Commands.add('goToProductsPage', () =>{
       .should('have.length.greaterThan', 0)
       .and('be.visible');
 });
+
+Cypress.Commands.add('goToCartPage', () => {
+    cy.get(loc.HomePageLocators.cartLink).first().click();
+    cy.contains('Shopping Cart');
+});

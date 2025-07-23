@@ -1,8 +1,8 @@
 import '../../support/commands/common.commands';
 import {locators as loc} from '../../support/locators';
 
-describe('Verify Test Cases Page', () => {
-it('Verify Test Cases Page', () => {
+describe('Verify All Products and product detail page', () => {
+it('Verify All Products and product detail page', () => {
     cy.openHomePage();
     cy.goToProductsPage();
     cy.get(loc.ProductsPageLocators.listOfProductDetails).first().click();

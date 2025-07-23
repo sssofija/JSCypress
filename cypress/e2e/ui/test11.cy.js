@@ -1,16 +1,13 @@
-import '../../support/commands/index'
+import '../../support/commands/common.commands'
 
 describe('Verify Subscription in Cart page', () =>{
-    it('Verify Subscription in Cart page', () =>{
+    it('subscribes with valid email', () => {
         cy.openHomePage();
-        cy.goToProductsPage();
-        cy.scrollTo('bottom');
-        cy.contains('Subscription').should('be.visible');
-        cy.get('#susbscribe_email').type('testemail@example.com'); 
-        cy.get('#subscribe').click();
-        cy.contains('You have been successfully subscribed!').should('be.visible');
-    })
-})
+        cy.goToCartPage();
+        cy.subscribeWithGeneratedUser({ valid: true });
+    });
+});
+
 /*Test Case 11: Verify Subscription in Cart page
 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'

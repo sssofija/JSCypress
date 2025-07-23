@@ -4,7 +4,7 @@ import '../../support/commands/common.commands';
 import { faker } from '@faker-js/faker';
 
 describe('Contact Us Form', () => {
-  it('Пользователь успешно отправляет форму обратной связи', () => {
+  it('Contact Us Form', () => {
     const name = faker.person.firstName();
     const email = faker.internet.email({ firstName: name });
 
