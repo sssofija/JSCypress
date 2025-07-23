@@ -21,3 +21,4 @@ export const invalidPasswordPatterns = [
   () => '!!!!!!!',
   () => 'abc def123',
 ];
+

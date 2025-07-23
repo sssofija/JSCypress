@@ -1,4 +1,4 @@
-import '../support/commands';
+import '../../support/commands';
 
 describe('Тестирование модальных окон на The Internet', () => {
   beforeEach(() => {

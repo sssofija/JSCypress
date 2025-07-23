@@ -82,13 +82,14 @@ Cypress.Commands.add('validUser', () => {
   });
 });
 
-Cypress.Commands.add('logIn', (email, password) => {
+Cypress.Commands.add('logIn', (email, password, fullName) => {
   cy.get(loc.LoginPageLocators.emailInput).type(email);
   cy.get(loc.LoginPageLocators.passwordInput).type(password);
   cy.get(loc.LoginPageLocators.loginButton).click();
-  cy.contains(`Logged in as`).should('be.visible');
+  cy.contains(`Logged in as ${fullName}`).should('be.visible');;
   });
 
 Cypress.Commands.add('logOut', () =>{
   cy.get(loc.UserAccountPageLocators.userAccountPageLogout).click();
+  cy.contains('Login to your account').should('be.visible');
 });

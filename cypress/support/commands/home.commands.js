@@ -23,5 +23,10 @@ Cypress.Commands.add('goToSignupPage', () => {
 
 Cypress.Commands.add('goToContactUsPage', () =>{
   cy.get(loc.HomePageLocators.contactUsLink).click();
-    cy.contains('Get In Touch');
+  cy.contains('Get In Touch');
+});
+
+Cypress.Commands.add('goToProductsPage', () =>{
+  cy.get(loc.HomePageLocators.productsLink).click();
+  cy.contains('All Products');
 });
