@@ -1,4 +1,4 @@
-import '../../support/commands/index'
+import '../../support/commands/common.commands'
 
 describe('Search Product', () => {
     it('Search Random Product', () => {
@@ -11,11 +11,6 @@ describe('Search Product', () => {
         });
     });
 });
-
-
-
-
-
 
 /*Test Case 9: Search Product
 1. Launch browser

@@ -1,4 +1,4 @@
-import '../../support/commands/index';
+import '../../support/commands/common.commands';
 
 describe('Register User with existing email', () => {
     it('should not allow registration with existing email', () => {

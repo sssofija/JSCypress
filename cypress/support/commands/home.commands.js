@@ -3,7 +3,9 @@ import { locators as loc } from '../locators';
 
 Cypress.Commands.add('openHomePage', () => {
   cy.visit('/')
-  cy.contains('AutomationExercise')
+  cy.contains('AutomationExercise');
+  cy.get('body').should('be.visible');
+
 });
 
 Cypress.Commands.add('goToTestCasesPage', () => {
@@ -29,4 +31,7 @@ Cypress.Commands.add('goToContactUsPage', () =>{
 Cypress.Commands.add('goToProductsPage', () =>{
   cy.get(loc.HomePageLocators.productsLink).click();
   cy.contains('All Products');
+  cy.get('.product-overlay')
+      .should('have.length.greaterThan', 0)
+      .and('be.visible');
 });

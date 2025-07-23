@@ -1,4 +1,4 @@
-import '../../support/commands/index';
+import '../../support/commands/common.commands';
 
 describe('Register User', () => {
   it('Registers a new user with valid data', () => {

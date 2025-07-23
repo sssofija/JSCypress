@@ -26,4 +26,3 @@ export function generatePassword({ valid = true } = {}) {
   const pattern = invalidPasswordPatterns[Math.floor(Math.random() * invalidPasswordPatterns.length)];
   return pattern();
 };
-

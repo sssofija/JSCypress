@@ -83,6 +83,7 @@ export const ProductsPageLocators = {
   brandItem: '.brands-name a',
   searchedProductsHeader: 'h2.title.text-center',
   addToCartButton: '.product-overlay .add-to-cart',
+  listOfProductDetails: 'a[href^="/product_details/"]',
 };
 
 export const CartPageLocators = {

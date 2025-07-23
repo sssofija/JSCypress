@@ -1,4 +1,4 @@
-import '../../support/commands/index';
+import '../../support/commands/common.commands';
 
 describe('Logout User', () => {
     it('Logout Valid User', () => {

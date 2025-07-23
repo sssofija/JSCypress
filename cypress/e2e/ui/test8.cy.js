@@ -1,34 +1,14 @@
-import '../../support/commands'
+import '../../support/commands/common.commands';
+import {locators as loc} from '../../support/locators';
 
 describe('Verify Test Cases Page', () => {
 it('Verify Test Cases Page', () => {
     cy.openHomePage();
-    cy.contains('Products').click();
-    cy.contains("All Products");
-    cy.get('.product-overlay')
-      .should('have.length.greaterThan', 0)
-      .and('be.visible');
-    cy.get('a[href^="/product_details/"]').first().click();
-    cy.url().should('include', '/product_details/');
-    cy.get('.product-information h2').should('be.visible');
-    cy.get('.product-information p')
-      .contains('Category')
-      .should('be.visible');
-    cy.get('.product-information span')
-      .contains('Rs.')
-      .should('be.visible');
-    cy.get('.product-information p')
-        .contains('Availability')
-        .should('be.visible');
-    cy.get('.product-information p')
-        .contains('Condition')
-        .should('be.visible');
-    cy.get('.product-information p')
-        .contains('Brand')
-        .should('be.visible');
-   
+    cy.goToProductsPage();
+    cy.get(loc.ProductsPageLocators.listOfProductDetails).first().click();
+    cy.verifyProductDetailsPage();
+  });
 });
-})
 
 /*Test Case 8: Verify All Products and product detail page
 1. Launch browser

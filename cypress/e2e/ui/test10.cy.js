@@ -1,17 +1,16 @@
-import'../../support/commands/index';
+import'../../support/commands/common.commands';
 
-describe('Verify Subscription in home page', () =>{
-    it('Verify Subscription in home page', () =>{
+describe('Verify Subscription in home page', () => {
+    it('subscribes with valid email', () => {
         cy.openHomePage();
-        cy.get('body').should('be.visible');
-        cy.scrollTo('bottom');
-        cy.contains('Subscription').should('be.visible');
-        cy.get('#susbscribe_email').type('testemail@example.com'); 
-        cy.get('#subscribe').click();
-        cy.contains('You have been successfully subscribed!').should('be.visible');
-    })
-})
+        cy.subscribeWithGeneratedUser({ valid: true });
+    });
 
+    it('shows error with invalid email', () => {
+        cy.openHomePage();
+        cy.subscribeWithGeneratedUser({ valid: false });
+    });
+});
 
 /*Test Case 10: Verify Subscription in home page
 1. Launch browser

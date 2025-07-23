@@ -1,4 +1,4 @@
-import '../../support/commands'
+import '../../support/commands/common.commands'
 
 describe('Verify Test Cases Page', () => {
 it('Verify Test Cases Page', () => {
