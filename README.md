@@ -5,7 +5,7 @@ This project includes automated end-to-end UI tests for [AutomationExercise.com]
 In addition to UI tests, the project also contains API tests, leveraging Cypress’s capabilities to validate backend endpoints and ensure the overall reliability of the application.
 
 
-📋 Project Overview  
+##📋 Project Overview  
 The tests cover key user flows and interface checks, including:
 
 - Opening the home page  
