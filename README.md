@@ -1,6 +1,8 @@
-# Cypress UI Tests for AutomationExercise.com
+# Cypress UI + API Tests for AutomationExercise.com
 
 This project includes automated end-to-end UI tests for [AutomationExercise.com](https://automationexercise.com), developed using [Cypress](https://www.cypress.io/). Cypress is particularly interesting because, according to the official recommendations from its developers, it does not encourage the use of the Page Object Model (POM) — a design pattern commonly used in UI test automation to organize web page elements and actions into separate classes or objects. Instead, Cypress promotes implementing reusable test logic and actions through custom commands, enabling cleaner, more maintainable, and straightforward test code.
+
+In addition to UI tests, the project also contains API tests, leveraging Cypress’s capabilities to validate backend endpoints and ensure the overall reliability of the application.
 
 
 ## 📋 Project Overview
