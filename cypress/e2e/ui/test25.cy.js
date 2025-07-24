@@ -1,14 +1,14 @@
 import '../../support/commands/common.commands';
+import {locators as loc} from '../../support/locators';
 
 describe('Test Case 25: Verify Scroll Up using Arrow button and Scroll Down functionality', () => {
   it('should scroll down and scroll up using the arrow button', () => {
-    
-    cy.opeHomePage();
+    const text = 'Full-Fledged practice website for Automation Engineers'
+
+    cy.openHomePage();
     cy.bottonSubscription();
-    // 6. Click on arrow at bottom right side to move upward
-    cy.get('#scrollUp').should('be.visible').click();
-    // 7. Verify that page is scrolled up and specific text is visible
-    cy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');
+    cy.get(loc.HomePageLocators.scrollUp).should('be.visible').click();
+    cy.contains(text).should('be.visible');
   });
 });
 

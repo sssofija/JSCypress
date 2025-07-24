@@ -1,34 +1,24 @@
-describe('Test Case 21: Add review on product', () => {
+import { createUser } from '../../support/utilities/utilities';
+import { faker } from '@faker-js/faker';
+
+describe('Product Review', () => {
   it('should allow user to add a review on a product', () => {
-    
-    cy.openHamePage();
+    const user = createUser();
+    const reviewText = faker.lorem.sentences(2);
 
-    // 3. Click on 'Products' button
-    cy.contains('Products').click();
-
-    // 4. Verify user is navigated to ALL PRODUCTS page successfully
-    cy.url().should('include', '/products');
-    cy.contains('All Products').should('be.visible');
-
-    // 5. Click on 'View Product' button (first product)
-    cy.get('.product-overlay').first().trigger('mouseover');
+    cy.openHomePage();
+    cy.goToProductsPage();
+    cy.get('.product-overlay').first().trigger('mouseover', {force: true});
     cy.contains('View Product').first().click();
-
-    // 6. Verify 'Write Your Review' is visible
     cy.contains('Write Your Review').should('be.visible');
-
-    // 7. Enter name, email and review
-    cy.get('#name').type('John Doe');
-    cy.get('#email').type('john@example.com');
-    cy.get('#review').type('This is a great product. Highly recommend!');
-
-    // 8. Click 'Submit' button
+    cy.get('#name').type(user.fullName);
+    cy.get('#email').type(user.email);
+    cy.get('#review').type(reviewText);
     cy.get('#button-review').click();
-
-    // 9. Verify success message
     cy.contains('Thank you for your review.').should('be.visible');
   });
 });
+
 
 /*Test Case 21: Add review on product
 1. Launch browser

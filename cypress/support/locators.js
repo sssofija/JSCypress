@@ -34,6 +34,7 @@ export const HomePageLocators = {
   brandItem: '.brands-name a',
   footer: 'footer',
   footerText: 'footer .footer-bottom',
+  scrollUp: '#scrollUp',
 };
 
 export const LoginPageLocators = {
@@ -108,11 +109,30 @@ export const UserAccountPageLocators = {
     userAccountPageDelete: '.fa.fa-trash-o'
 };
 
+export const PaymentLocators = {
+  nameOnCard: '[name="name_on_card"]',
+  cardNumber: '[name="card_number"]',
+  cvc: '[name="cvc"]',
+  expiryMonth: '[name="expiry_month"]',
+  expiryYear: '[name="expiry_year"]',
+};
+
+export const CheckoutPageLocators = {
+  nameSurname: '.address_firstname.address_lastname',
+  company: '.address_address1.address_address2:nth-child(1)',
+  address: '.address_address1.address_address2:nth-child(2)',
+  cityStateZip: '.address_city.address_state_name.address_postcode',
+  country: '.address_country_name',
+  mobile: '.address_phone',
+};
+
 export const locators = {
   LoginPageLocators,
   HomePageLocators,
   ContactUsPageLocators,
   ProductsPageLocators,
   CartPageLocators,
-  UserAccountPageLocators
+  CheckoutPageLocators,
+  UserAccountPageLocators, 
+  PaymentLocators,
 };

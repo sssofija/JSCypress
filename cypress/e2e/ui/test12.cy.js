@@ -5,7 +5,7 @@ describe('Test Case 12: Add Products in Cart', () => {
     let firstProductName = '';
     let secondProductName = '';
 
-    cy.visit('https://automationexercise.com');
+    cy.openHomePage();
     cy.get('#slider').should('be.visible');
     cy.contains('Products').click();
 

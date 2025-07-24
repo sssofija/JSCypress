@@ -2,7 +2,8 @@ import '../../support/commands/common.commands';
 
 describe('Test Case 13: Verify Product quantity in Cart', () => {
   it('adds product with specific quantity and verifies it in cart', () => {
-    cy.visit('https://automationexercise.com');
+    
+    cy.openHomePage();
     cy.get('#slider').should('be.visible');
 
     cy.contains('View Product').first().click();

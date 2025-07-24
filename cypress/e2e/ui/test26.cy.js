@@ -2,11 +2,12 @@ import '../../support/commands/common.commands'
 
 describe('Test Case 26: Verify Scroll Up without Arrow button and Scroll Down functionality', () => {
   it('should scroll down and up successfully', () => {
+    const text = 'Full-Fledged practice website for Automation Engineers'
 
-    cy.opeHomePage();
+    cy.openHomePage();
     cy.bottonSubscription();
     cy.scrollTo('top');
-    cy.contains('Full-Fledged practice website for Automation Engineers').should('be.visible');
+    cy.contains(text).should('be.visible');
   });
 });
 
