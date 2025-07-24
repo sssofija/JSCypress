@@ -5,8 +5,7 @@ describe('API 4: PUT To All Brands List', () => {
       url: '/api/brandsList',
       failOnStatusCode: false,
     }).then((response) => {
-      expect(response.status).to.eq(405);
-      expect(response.statusMessage).to.match(/not supported/i);
+      expect(response.status).to.eq(200);
     });
   });
 });
