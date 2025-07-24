@@ -1,7 +1,7 @@
 describe('Test Case 18: View Category Products', () => {
   it('should view category and sub-category products', () => {
-    // 1. Launch browser & 2. Navigate to url
-    cy.visit('http://automationexercise.com');
+    
+    cy.openHomePage();
 
     // 3. Verify that categories are visible on left side bar
     cy.get('.left-sidebar').should('be.visible');

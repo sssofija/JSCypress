@@ -25,3 +25,9 @@ Cypress.Commands.add('subscribeWithGeneratedUser', (options = { valid: true }) =
   });
 }
 });
+
+Cypress.Commands.add('bottonSubscription', () => {
+  
+  cy.scrollTo('bottom');
+  cy.contains('Subscription').should('be.visible');
+});

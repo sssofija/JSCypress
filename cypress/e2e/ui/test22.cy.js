@@ -1,8 +1,8 @@
 describe('Test Case 22: Add to cart from Recommended items', () => {
   it('should add recommended product to cart and verify it in the cart page', () => {
-    // 1. Launch browser & 2. Navigate to url
-    cy.visit('http://automationexercise.com');
 
+    cy.openHomePage();
+    
     // 3. Scroll to bottom of page
     cy.scrollTo('bottom');
 

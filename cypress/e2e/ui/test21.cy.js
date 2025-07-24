@@ -1,7 +1,7 @@
 describe('Test Case 21: Add review on product', () => {
   it('should allow user to add a review on a product', () => {
-    // 1. Launch browser & 2. Navigate to url
-    cy.visit('http://automationexercise.com');
+    
+    cy.openHamePage();
 
     // 3. Click on 'Products' button
     cy.contains('Products').click();

@@ -1,7 +1,7 @@
 describe('Test Case 17: Remove Products From Cart', () => {
   it('should add products to cart and remove them', () => {
-    // 1. Launch browser & 2. Navigate to url
-    cy.visit('http://automationexercise.com');
+ 
+    cy.openHomePage();
 
     // 3. Verify that home page is visible successfully
     cy.get('body').should('be.visible');

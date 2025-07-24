@@ -1,7 +1,7 @@
 describe('Test Case 19: View & Cart Brand Products', () => {
   it('should navigate to brand pages and verify products', () => {
-    // 1. Launch browser & 2. Navigate to url
-    cy.visit('http://automationexercise.com');
+    
+    cy.openHomePage();
 
     // 3. Click on 'Products' button
     cy.contains('Products').click();
