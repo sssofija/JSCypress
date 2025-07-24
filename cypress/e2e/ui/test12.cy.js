@@ -1,38 +1,54 @@
-describe('Debug adding two products to cart', () => {
-  it('adds two products and verifies them in cart', () => {
-    cy.visit('http://automationexercise.com');
+import '../../support/commands/common.commands';
+
+describe('Test Case 12: Add Products in Cart', () => {
+  it('adds two products and verifies prices, quantity, and total', () => {
+    let firstProductName = '';
+    let secondProductName = '';
+
+    cy.visit('https://automationexercise.com');
+    cy.get('#slider').should('be.visible');
     cy.contains('Products').click();
 
-    // Добавляем первый товар
-    cy.get('.product-overlay').eq(0).invoke('show');
-    cy.get('.add-to-cart').eq(0).scrollIntoView().click({ force: true });
+    cy.get('.product-image-wrapper').eq(0).within(() => {
+      cy.get('.productinfo p').invoke('text').then(text => {
+        firstProductName = text.trim();
+      });
+      cy.get('.product-overlay').invoke('show');
+      cy.get('.product-overlay .add-to-cart').click({ force: true });
+    });
+
     cy.get('.modal-content').should('be.visible');
-    cy.log('Первый товар добавлен');
     cy.contains('Continue Shopping').click();
+    cy.wait(1000);
 
-    cy.wait(1500);
-
-    // Добавляем второй товар
-    cy.get('.product-overlay').eq(1).invoke('show');
-    cy.get('.add-to-cart').eq(1).scrollIntoView().click({ force: true });
-    cy.get('.modal-content').should('be.visible').then(() => {
-      cy.log('Второй товар добавлен');
+    cy.get('.product-image-wrapper').eq(1).within(() => {
+      cy.get('.productinfo p').invoke('text').then(text => {
+        secondProductName = text.trim();
+      });
+      cy.get('.product-overlay').invoke('show');
+      cy.get('.product-overlay .add-to-cart').click({ force: true });
     });
 
-    /*cy.contains('View Cart').click();
+    cy.get('.modal-content').should('be.visible');
+    cy.contains('View Cart').click();
 
-    cy.url().should('include', '/view_cart');
-    cy.get('.cart_info', { timeout: 10000 }).should('be.visible');
-
-    cy.get('.cart_info table tbody tr').then(rows => {
-      cy.log('Количество строк в корзине: ' + rows.length);
+    cy.get('.cart_info').should('be.visible');
+    cy.get('.cart_description').then($cart => {
+      expect($cart.text()).to.include(firstProductName);
+      expect($cart.text()).to.include(secondProductName);
     });
 
-    // Пауза, чтобы визуально проверить
-    cy.wait(2000);
+    cy.get('td.cart_price > p').each(($el) => {
+      cy.wrap($el).invoke('text').should('include', 'Rs.');
+    });
 
-    // Проверка товаров
-    cy.get('.cart_info table tbody tr').should('have.length.at.least', 3);*/
+    cy.get('.cart_quantity').each(($el) => {
+      cy.wrap($el).should('contain', '1');
+    });
+
+    cy.get('td.cart_total > p').each(($el) => {
+      cy.wrap($el).invoke('text').should('include', 'Rs.');
+    });
   });
 });
 

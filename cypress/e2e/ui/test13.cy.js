@@ -1,3 +1,24 @@
+import '../../support/commands/common.commands';
+
+describe('Test Case 13: Verify Product quantity in Cart', () => {
+  it('adds product with specific quantity and verifies it in cart', () => {
+    cy.visit('https://automationexercise.com');
+    cy.get('#slider').should('be.visible');
+
+    cy.contains('View Product').first().click();
+    cy.url().should('include', '/product_details/');
+    cy.get('.product-information').should('be.visible');
+
+    cy.get('#quantity').clear().type('4');
+    cy.contains('button', 'Add to cart').click();
+
+    cy.get('.modal-content').should('be.visible');
+    cy.contains('View Cart').should('be.visible').click();
+
+    cy.get('.cart_quantity button.disabled').should('have.text', '4');
+  });
+});
+
 
 /*Test Case 13: Verify Product quantity in Cart
 1. Launch browser
